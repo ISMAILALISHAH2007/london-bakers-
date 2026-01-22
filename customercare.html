@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Care | Sweet Heaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">SH</div>
+            SWEET<span>HEAVEN</span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="gifthampers.html">Gift Hampers</a></li>
+            <li class="dropdown">
+                <a href="#">Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="index.html#bespoke">Bespoke Lab</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html">Catering</a>
+                </div>
+            </li>
+           <li class="dropdown">
+                <a href="#">About ▾</a>
+                <div class="dropdown-content">
+                    <a href="aboutus.html">Our Story</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="customercare.html">Customer Care</a>
+                </div>
+            </li>
+        </ul>
+        
+        <div class="nav-actions">
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒
+                <div class="cart-count">0</div>
+            </div>
+        </div>
+        
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <section class="customer-care" style="margin-top: 80px; padding: 100px 0;">
+        <div class="container">
+            <div class="chat-container">
+                <div class="contact-info">
+                    <h1 style="font-size: 3.5rem; margin-bottom: 20px;">How can we assist you?</h1>
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px; color: #666;">Our digital concierge is trained in the art of patisserie and service. Ask about our daily specials, bespoke cake timelines, or dietary information.</p>
+                    
+                    <div style="background: var(--pink-bg); padding: 30px; border-radius: 15px; margin-bottom: 40px;">
+                        <h3 style="margin-bottom: 20px; color: var(--dark-choco);">Contact Information</h3>
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 15px;">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <div style="width: 40px; height: 40px; background: var(--accent-pink); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">✉️</div>
+                                <div>
+                                    <div style="font-weight: 600;">Email</div>
+                                    <div style="color: #666;">concierge@sweetheaven.com</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <div style="width: 40px; height: 40px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">📞</div>
+                                <div>
+                                    <div style="font-weight: 600;">Phone</div>
+                                    <div style="color: #666;">+1 (800) SWEET-01</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <div style="width: 40px; height: 40px; background: var(--dark-choco); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">🕐</div>
+                                <div>
+                                    <div style="font-weight: 600;">Hours</div>
+                                    <div style="color: #666;">Dawn till Dusk (6 AM - 8 PM)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 style="margin-bottom: 20px; color: var(--dark-choco);">Frequently Asked Questions</h3>
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <div class="faq-item" style="border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                                <div style="font-weight: 600; margin-bottom: 5px; cursor: pointer;" onclick="toggleAnswer(this)">How far in advance should I order a custom cake?</div>
+                                <div style="color: #666; display: none; margin-top: 10px;">We recommend ordering custom cakes at least 48 hours in advance. For wedding cakes or large events, please contact us 2-3 weeks ahead.</div>
+                            </div>
+                            <div class="faq-item" style="border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                                <div style="font-weight: 600; margin-bottom: 5px; cursor: pointer;" onclick="toggleAnswer(this)">Do you offer gluten-free or vegan options?</div>
+                                <div style="color: #666; display: none; margin-top: 10px;">Yes! We have a selection of gluten-free and vegan pastries. Please specify your dietary requirements when ordering.</div>
+                            </div>
+                            <div class="faq-item" style="border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                                <div style="font-weight: 600; margin-bottom: 5px; cursor: pointer;" onclick="toggleAnswer(this)">What is your delivery radius and fees?</div>
+                                <div style="color: #666; display: none; margin-top: 10px;">We deliver within 20 miles of our atelier. Delivery is free for orders over $100, otherwise a $10 fee applies.</div>
+                            </div>
+                            <div class="faq-item" style="border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                                <div style="font-weight: 600; margin-bottom: 5px; cursor: pointer;" onclick="toggleAnswer(this)">Can I modify or cancel my order?</div>
+                                <div style="color: #666; display: none; margin-top: 10px;">Orders can be modified or cancelled up to 24 hours before delivery/pickup. For custom orders, modifications may incur additional charges.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-box">
+                    <div class="chat-header">
+                        <h3>Heavenly Bot</h3>
+                        <span>AI Concierge Active</span>
+                    </div>
+                    <div class="chat-messages" id="chatBox">
+                        <div class="message bot">Welcome to Sweet Heaven! I'm your personal concierge. How may I sweeten your day? You can ask me about our menu, delivery, custom orders, or anything else!</div>
+                    </div>
+                    <div style="padding: 0 20px;">
+                        <div id="typingIndicator" class="typing" style="display: none;">Concierge is typing...</div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="userInput" placeholder="Ask about cakes, delivery, hours...">
+                        <button class="btn" id="sendBtn" style="padding: 12px 25px; border-radius: 50px;">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Sweet Heaven</h3>
+                    <p style="color: #bbb; margin-bottom: 20px; line-height: 1.6;">Always here to sweeten your day.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📽️</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="boutique.html">Boutique</a></li>
+                        <li><a href="gifthampers.html">Gift Hampers</a></li>
+                        <li><a href="customercare.html">Customer Care</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Help & Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Delivery Info</a></li>
+                        <li><a href="#">Returns Policy</a></li>
+                        <li><a href="feedback.html">Leave Feedback</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Business Hours</h3>
+                    <ul class="footer-links" style="color: #bbb;">
+                        <li>Monday - Friday: 7AM - 9PM</li>
+                        <li>Saturday: 8AM - 10PM</li>
+                        <li>Sunday: 8AM - 8PM</li>
+                        <li>Holidays: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Sweet Heaven Atelier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Sweet Bag</h3>
+            <button class="close-cart">✕</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span>$0.00</span>
+        </div>
+        <button class="btn btn-dark" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+<script>
+// Custom chatbot functionality for customer care page
+document.addEventListener('DOMContentLoaded', function() {
+    const chatBox = document.getElementById('chatBox');
+    const userInput = document.getElementById('userInput');
+    const sendBtn = document.getElementById('sendBtn');
+    const typingIndicator = document.getElementById('typingIndicator');
+    
+    // Responses for the customer care chatbot
+    const responses = {
+        greetings: [
+            "Hello! I'm your Sweet Heaven concierge. How can I assist you today? 🍰",
+            "Welcome to our customer care! What can I help you with? 🎂",
+            "Hi there! Ready to get some sweet assistance? 🧁"
+        ],
+        menu: [
+            "We offer a wide range of artisanal pastries, cakes, and bespoke creations. Check our Boutique section for the full collection!",
+            "Our menu includes signature cakes, tarts, macarons, and freshly baked bread. What are you craving today?",
+            "From Mille-Feuille to bespoke wedding cakes, we have something for every occasion. Visit our products page to see everything!"
+        ],
+        hours: [
+            "We're open daily from 7 AM to 9 PM. Weekend hours are 8 AM to 10 PM.",
+            "Our atelier welcomes you from dawn till dusk: 7 AM - 9 PM on weekdays, 8 AM - 10 PM on weekends.",
+            "Sweet Heaven operates 7 AM to 9 PM Monday through Friday, and 8 AM to 10 PM on Saturday and Sunday."
+        ],
+        delivery: [
+            "We offer delivery within 20 miles of our atelier. Orders placed before 3 PM are delivered same day!",
+            "Delivery is available for orders over $50. Same-day delivery for orders placed before 3 PM.",
+            "Yes! We deliver. Free delivery for orders over $100. Otherwise, it's a flat $10 fee."
+        ],
+        custom: [
+            "Our Bespoke Lab can create custom cakes for any occasion. Minimum 48 hours notice required.",
+            "Absolutely! We specialize in custom creations. Visit our Bespoke Lab section to design your dream cake.",
+            "Custom orders are our specialty! We need at least 2 days notice for bespoke creations."
+        ],
+        ingredients: [
+            "We use only the finest ingredients: French butter, Belgian chocolate, and organic fruits.",
+            "All our products are made with premium, locally-sourced ingredients and European imports.",
+            "Quality is our priority: organic flour, free-range eggs, and seasonal fruits in every creation."
+        ],
+        pricing: [
+            "Our prices range from $6 for individual pastries to $200+ for custom cakes. Check our products for specific pricing.",
+            "Prices vary by item. Individual treats start at $6, while custom creations begin at $75.",
+            "You'll find detailed pricing on each product page. Most individual items are $6-$25."
+        ],
+        events: [
+            "We cater events! From intimate gatherings to weddings, our pastry chefs create memorable spreads.",
+            "Yes, we provide catering for events. Minimum order of $300 for event catering.",
+            "Our event catering starts at $25 per person. Contact us for a customized quote!"
+        ],
+        location: [
+            "📍 We're located at 75 Rue du Faubourg Saint-Honoré, Paris, France 75008",
+            "Find us in Paris at 75 Rue du Faubourg Saint-Honoré. We're in the heart of the city!",
+            "Our atelier is at 75 Rue du Faubourg Saint-Honoré, Paris. Come visit us!"
+        ],
+        contact: [
+            "📞 Call us at +1 (800) SWEET-01\n✉️ Email: concierge@sweetheaven.com",
+            "Reach us at +1 (800) SWEET-01 or email concierge@sweetheaven.com",
+            "Contact: +1 (800) SWEET-01 | concierge@sweetheaven.com"
+        ],
+        fallback: [
+            "I'm not sure about that. You can email us at concierge@sweetheaven.com for more specific questions!",
+            "That's a great question! Let me connect you with our team for a detailed answer.",
+            "Hmm, I need to check on that. In the meantime, browse our FAQ section or contact our team directly."
+        ]
+    };
+    
+    // Function to add a message to the chat
+    function addMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${sender}`;
+        messageDiv.textContent = text;
+        chatBox.appendChild(messageDiv);
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+    
+    // Function to get a random response
+    function getRandomResponse(type) {
+        const responseArray = responses[type];
+        return responseArray[Math.floor(Math.random() * responseArray.length)];
+    }
+    
+    // Function to process user message
+    function processUserMessage(message) {
+        const lowerMessage = message.toLowerCase();
+        let responseType = 'fallback';
+        
+        if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
+            responseType = 'greetings';
+        } else if (lowerMessage.includes('menu') || lowerMessage.includes('what do you have') || lowerMessage.includes('offer') || lowerMessage.includes('product')) {
+            responseType = 'menu';
+        } else if (lowerMessage.includes('hour') || lowerMessage.includes('open') || lowerMessage.includes('close')) {
+            responseType = 'hours';
+        } else if (lowerMessage.includes('deliver') || lowerMessage.includes('shipping') || lowerMessage.includes('ship')) {
+            responseType = 'delivery';
+        } else if (lowerMessage.includes('custom') || lowerMessage.includes('bespoke') || lowerMessage.includes('special order')) {
+            responseType = 'custom';
+        } else if (lowerMessage.includes('ingredient') || lowerMessage.includes('organic') || lowerMessage.includes('fresh')) {
+            responseType = 'ingredients';
+        } else if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much')) {
+            responseType = 'pricing';
+        } else if (lowerMessage.includes('event') || lowerMessage.includes('cater') || lowerMessage.includes('wedding')) {
+            responseType = 'events';
+        } else if (lowerMessage.includes('where') || lowerMessage.includes('location') || lowerMessage.includes('address')) {
+            responseType = 'location';
+        } else if (lowerMessage.includes('contact') || lowerMessage.includes('call') || lowerMessage.includes('email')) {
+            responseType = 'contact';
+        }
+        
+        return getRandomResponse(responseType);
+    }
+    
+    // Function to send message
+    function sendMessage() {
+        const message = userInput.value.trim();
+        
+        if (!message) return;
+        
+        // Add user message
+        addMessage(message, 'user');
+        userInput.value = '';
+        
+        // Show typing indicator
+        typingIndicator.style.display = 'block';
+        chatBox.scrollTop = chatBox.scrollHeight;
+        
+        // Simulate bot thinking and respond
+        setTimeout(() => {
+            typingIndicator.style.display = 'none';
+            const botResponse = processUserMessage(message);
+            addMessage(botResponse, 'bot');
+        }, 1000 + Math.random() * 1000);
+    }
+    
+    // Add event listeners
+    sendBtn.addEventListener('click', sendMessage);
+    
+    userInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+    
+    // Optional: Auto-focus on input
+    userInput.focus();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Sweet Heaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">SH</div>
+            SWEET<span>HEAVEN</span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="gifthampers.html">Gift Hampers</a></li>
+            <li class="dropdown">
+                <a href="#">Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="index.html#bespoke">Bespoke Lab</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html">Catering</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">About ▾</a>
+                <div class="dropdown-content">
+                    <a href="aboutus.html">Our Story</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="customercare.html">Customer Care</a>
+                </div>
+            </li>
+        </ul>
+        
+        <div class="nav-actions">
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒
+                <div class="cart-count">0</div>
+            </div>
+        </div>
+        
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <section class="contact-hero">
+        <div class="container">
+            <div style="text-align: center; color: white;">
+                <h1 style="font-size: 4rem; margin-bottom: 20px;">Let's Create Something Divine</h1>
+                <p style="max-width: 600px; margin: 0 auto; font-size: 1.2rem; opacity: 0.9;">From bespoke wedding gâteaux to private atelier inquiries, our master pâtissiers are ready to bring your sweetest visions to life.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-section" style="padding: 100px 0;">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2 style="font-size: 3rem; margin-bottom: 30px; color: var(--dark-choco);">Get in Touch</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 40px; color: #666;">Whether you're planning an event, have a custom order request, or simply want to share your Sweet Heaven experience, we'd love to hear from you. Our team typically responds within 24 hours.</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px;">
+                        <div>
+                            <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--gold);">The Atelier</h3>
+                            <p style="color: #666; line-height: 1.6;">75 Rue du Faubourg Saint-Honoré<br>Paris, France 75008</p>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--gold);">Direct Inquiry</h3>
+                            <p style="color: #666; line-height: 1.6;">atelier@sweetheaven.com<br>+33 1 23 45 67 89</p>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--gold);">Business Hours</h3>
+                            <p style="color: #666; line-height: 1.6;">Monday - Friday: 7AM - 9PM<br>Weekends: 8AM - 10PM</p>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--gold);">For Events</h3>
+                            <p style="color: #666; line-height: 1.6;">events@sweetheaven.com<br>+33 1 23 45 67 90</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: var(--dark-choco);">Visit Our Atelier</h3>
+                        <div style="background: var(--pink-bg); padding: 30px; border-radius: 15px;">
+                            <p style="margin-bottom: 15px; color: #666;">Experience the magic firsthand. Our atelier features a tasting room where you can sample creations and consult with our patissiers.</p>
+                            <p style="color: #666;"><strong>Tip:</strong> For custom consultations, we recommend booking an appointment in advance.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="font-size: 2rem; margin-bottom: 30px; color: var(--dark-choco);">Send a Message</h3>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Your Name *</label>
+                            <input type="text" class="form-control" placeholder="E.g. Julianne Vane" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" class="form-control" placeholder="name@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="+33 1 23 45 67 89">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Inquiry Type *</label>
+                            <select class="form-control" required>
+                                <option value="">Select an option</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="bespoke">Bespoke Cake Commission</option>
+                                <option value="wedding">Wedding Cake</option>
+                                <option value="event">Private Event</option>
+                                <option value="corporate">Corporate Gifting</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Event Date (if applicable)</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Your Message *</label>
+                            <textarea class="form-control" rows="6" placeholder="How can we make your day heavenly? Please include any details about your vision, dietary requirements, or special requests..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 30px;">
+                            <label>
+                                <input type="checkbox" name="newsletter" checked>
+                                Subscribe to our newsletter for sweet inspiration
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%; padding: 15px; font-size: 1rem;">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section style="padding: 80px 0; background: var(--pink-bg);">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 2.5rem;">Frequently Asked Questions</h2>
+            
+            <div style="max-width: 800px; margin: 50px auto 0;">
+                <div style="margin-bottom: 30px;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--dark-choco);">How far in advance should I book a custom cake?</h3>
+                    <p style="color: #666; line-height: 1.6;">We recommend booking at least 48 hours in advance for standard custom cakes. For wedding cakes or large events, please contact us 2-3 weeks ahead to ensure availability.</p>
+                </div>
+                
+                <div style="margin-bottom: 30px;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--dark-choco);">Do you offer international shipping?</h3>
+                    <p style="color: #666; line-height: 1.6;">Currently, we only ship within France and select European countries. For international inquiries, please contact us to discuss custom solutions.</p>
+                </div>
+                
+                <div style="margin-bottom: 30px;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--dark-choco);">Can I schedule a tasting appointment?</h3>
+                    <p style="color: #666; line-height: 1.6;">Yes! We offer complimentary tasting appointments for wedding cakes and large events. Please use the form above to schedule.</p>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--dark-choco);">What are your dietary accommodation options?</h3>
+                    <p style="color: #666; line-height: 1.6;">We offer gluten-free, vegan, and nut-free options. Please specify any dietary requirements in your inquiry, and we'll work with you to create something delicious and safe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Sweet Heaven</h3>
+                    <p style="color: #bbb; margin-bottom: 20px; line-height: 1.6;">Always here to sweeten your day with perfect pastry.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📽️</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Contact</h3>
+                    <ul class="footer-links" style="color: #bbb;">
+                        <li>📍 75 Rue du Faubourg Saint-Honoré</li>
+                        <li>Paris, France 75008</li>
+                        <li>📞 +33 1 23 45 67 89</li>
+                        <li>✉️ hello@sweetheaven.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Business Hours</h3>
+                    <ul class="footer-links" style="color: #bbb;">
+                        <li>Monday - Friday: 7AM - 9PM</li>
+                        <li>Saturday: 8AM - 10PM</li>
+                        <li>Sunday: 8AM - 8PM</li>
+                        <li>Holidays: 9AM - 6PM</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Stay Connected</h3>
+                    <div class="newsletter">
+                        <p>Subscribe for updates on seasonal creations and exclusive offers.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Sweet Heaven Atelier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Sweet Bag</h3>
+            <button class="close-cart">✕</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span>$0.00</span>
+        </div>
+        <button class="btn btn-dark" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+    
+    <div class="modal-overlay" id="contact-success-modal">
+        <div class="modal">
+            <button class="close-modal" onclick="closeModal('contact-success-modal')">✕</button>
+            <div style="font-size: 4rem; color: var(--gold); margin-bottom: 20px;">✉️</div>
+            <h2 style="font-family: 'Cormorant Garamond'; font-size: 2.5rem; margin-bottom: 15px;">Message Sent!</h2>
+            <p style="color: #666; margin-bottom: 30px; line-height: 1.6;">Thank you for reaching out! Our team will review your inquiry and get back to you within 24 hours. In the meantime, feel free to browse our collection.</p>
+            <button class="btn" onclick="closeModal('contact-success-modal')">Continue to Boutique</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('contact-success-modal').style.display = 'flex';
+            this.reset();
+        });
+    </script>
+</body>
+</html>

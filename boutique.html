@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique | Sweet Heaven</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">SH</div>
+            SWEET<span>HEAVEN</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="gifthampers.html">Gift Hampers</a></li>
+            <li class="dropdown">
+                <a href="#">Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="index.html#bespoke">Bespoke Lab</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html">Catering</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">About ▾</a>
+                <div class="dropdown-content">
+                    <a href="aboutus.html">Our Story</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="customercare.html">Customer Care</a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search products..." id="search-input">
+                <div class="search-icon">🔍</div>
+            </div>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒
+                <div class="cart-count">0</div>
+            </div>
+        </div>
+
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section class="products-section" style="margin-top: 80px;">
+        <div class="container">
+            <h1 class="section-title">The Boutique Collection</h1>
+            <p class="section-subtitle">Discover our handcrafted selection of artisanal pastries</p>
+
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="cakes">Cakes</button>
+                <button class="filter-btn" data-filter="tarts">Tarts</button>
+                <button class="filter-btn" data-filter="macarons">Macarons</button>
+                <button class="filter-btn" data-filter="pastries">Pastries</button>
+                <button class="filter-btn" data-filter="bread">Artisan Bread</button>
+            </div>
+
+            <div class="products-grid" id="products-grid">
+                <!-- Products loaded by JavaScript -->
+            </div>
+
+            <div class="load-more">
+                <button class="btn btn-outline" id="load-more-btn">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Sweet Heaven</h3>
+                    <p style="color: #bbb; margin-bottom: 20px; line-height: 1.6;">Artisanal patisserie & bespoke
+                        creations since 2026.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📽️</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="boutique.html">Boutique</a></li>
+                        <li><a href="gifthampers.html">Gift Hampers</a></li>
+                        <li><a href="aboutus.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Customer Care</h3>
+                    <ul class="footer-links">
+                        <li><a href="customercare.html">Help Center</a></li>
+                        <li><a href="#">Delivery Info</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="feedback.html">Leave Feedback</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Stay Sweetened</h3>
+                    <div class="newsletter">
+                        <p>Subscribe for exclusive recipes and early access.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Sweet Heaven Atelier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Sweet Bag</h3>
+            <button class="close-cart">✕</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span>$0.00</span>
+        </div>
+        <button class="btn btn-dark" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+    <script>
+        const products = [
+            { id: 1, name: "Mille-Feuille Classique", category: "pastries", price: 18.00, image: "https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=400", description: "Layers of crispy puff pastry and rich vanilla diplomat cream.", badge: "Bestseller" },
+            { id: 2, name: "Framboise Tart", category: "tarts", price: 16.00, image: "https://images.pexels.com/photos/461431/pexels-photo-461431.jpeg?auto=compress&cs=tinysrgb&w=400", description: "Fresh raspberries atop a buttery shortcrust shell.", badge: "Seasonal" },
+            { id: 3, name: "Chocolate Ganache Cake", category: "cakes", price: 22.00, image: "https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&cs=tinysrgb&w=400", description: "Decadent dark chocolate layers with silk ganache." },
+            { id: 4, name: "Lemon Meringue Tart", category: "tarts", price: 15.00, image: "https://images.pexels.com/photos/3923555/pexels-photo-3923555.jpeg?auto=compress&cs=tinysrgb&w=400", description: "Zesty lemon curd topped with toasted marshmallow meringue." },
+            { id: 5, name: "Rose Macaron Box", category: "macarons", price: 28.00, image: "https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=400", description: "Box of 12 hand-piped macarons with delicate rose petal essence.", badge: "Popular" },
+            { id: 6, name: "Salted Caramel Brownie", category: "cakes", price: 20.00, image: "https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=400", description: "Dense chocolate cake with a gooey salted caramel center." },
+            { id: 7, name: "Country Sourdough", category: "bread", price: 12.00, image: "https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=400", description: "48-hour fermented artisanal loaf." },
+            { id: 8, name: "Butter Croissant", category: "pastries", price: 6.00, image: "https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg?auto=compress&cs=tinysrgb&w=400", description: "Traditional honeycomb-layered pastry.", badge: "Morning Special" },
+            { id: 9, name: "Opera Gâteau", category: "cakes", price: 24.00, image: "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=400", description: "Coffee buttercream and ganache layered cake.", badge: "French Classic" },
+            { id: 10, name: "Almond Croissant", category: "pastries", price: 8.00, image: "https://images.pexels.com/photos/2258248/pexels-photo-2258248.jpeg?auto=compress&cs=tinysrgb&w=400", description: "Twice-baked with frangipane and toasted almonds." },
+            { id: 11, name: "Paris-Brest", category: "pastries", price: 19.00, image: "https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?auto=compress&cs=tinysrgb&w=400", description: "Choux pastry ring with praline cream.", badge: "Cycling Classic" },
+            { id: 12, name: "Tiramisu Pot", category: "cakes", price: 17.00, image: "https://images.pexels.com/photos/372851/pexels-photo-372851.jpeg?auto=compress&cs=tinysrgb&w=400", description: "Espresso-soaked ladyfingers with mascarpone." }
+        ];
+
+        let currentFilter = 'all';
+        let displayedProducts = 6;
+
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            const filtered = currentFilter === 'all'
+                ? products
+                : products.filter(p => p.category === currentFilter);
+
+            const toDisplay = filtered.slice(0, displayedProducts);
+
+            grid.innerHTML = toDisplay.map(product => `
+                <div class="product-card">
+                    ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p class="product-desc">${product.description}</p>
+                        <div class="product-price">$${product.price.toFixed(2)}</div>
+                        <div class="product-actions">
+                            <button class="btn" onclick="addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')})">Add to Cart</button>
+                            <button class="btn btn-outline" onclick="viewProductDetails(${JSON.stringify(product).replace(/"/g, '&quot;')})">Details</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            if (toDisplay.length >= filtered.length) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'inline-block';
+            }
+        }
+
+        function filterProducts(category, button) {
+            currentFilter = category;
+            displayedProducts = 6;
+
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+
+            renderProducts();
+        }
+
+        function loadMore() {
+            displayedProducts += 6;
+            renderProducts();
+        }
+
+        function searchProducts() {
+            const searchInput = document.getElementById('search-input');
+            const searchTerm = searchInput.value.toLowerCase();
+
+            if (searchTerm) {
+                const filtered = products.filter(p =>
+                    p.name.toLowerCase().includes(searchTerm) ||
+                    p.description.toLowerCase().includes(searchTerm) ||
+                    p.category.toLowerCase().includes(searchTerm)
+                );
+
+                const grid = document.getElementById('products-grid');
+                grid.innerHTML = filtered.map(product => `
+                    <div class="product-card">
+                        ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                        <img src="${product.image}" alt="${product.name}" class="product-image">
+                        <div class="product-info">
+                            <h3>${product.name}</h3>
+                            <p class="product-desc">${product.description}</p>
+                            <div class="product-price">$${product.price.toFixed(2)}</div>
+                            <div class="product-actions">
+                                <button class="btn" onclick="addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')})">Add to Cart</button>
+                                <button class="btn btn-outline" onclick="viewProductDetails(${JSON.stringify(product).replace(/"/g, '&quot;')})">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+                document.getElementById('load-more-btn').style.display = 'none';
+            } else {
+                renderProducts();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            renderProducts();
+
+            document.querySelectorAll('.filter-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    filterProducts(this.getAttribute('data-filter'), this);
+                });
+            });
+
+            document.getElementById('load-more-btn').addEventListener('click', loadMore);
+            document.getElementById('search-input').addEventListener('input', searchProducts);
+        });
+    </script>
+</body>
+
+</html>

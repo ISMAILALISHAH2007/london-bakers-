@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Heaven | Artisanal Patisserie & Bespoke Lab</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">SH</div>
+            SWEET<span>HEAVEN</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="gifthampers.html">Gift Hampers</a></li>
+            <li class="dropdown">
+                <a href="#">Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="index.html#bespoke">Bespoke Lab</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html">Catering</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">About ▾</a>
+                <div class="dropdown-content">
+                    <a href="aboutus.html">Our Story</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="customercare.html">Customer Care</a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒
+                <div class="cart-count">0</div>
+            </div>
+        </div>
+
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide"
+                style="background-image: url('https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=1600')">
+                <div class="hero-content">
+                    <h1>Le Grand Gâteau</h1>
+                    <p>Pink Velvet Signature Creation</p>
+                    <a href="boutique.html" class="btn">Explore Collection</a>
+                </div>
+            </div>
+            <div class="slide"
+                style="background-image: url('https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=1600')">
+                <div class="hero-content">
+                    <h1>Parisian Macarons</h1>
+                    <p>Hand-pipped Daily Selection</p>
+                    <a href="boutique.html" class="btn">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide"
+                style="background-image: url('https://images.pexels.com/photos/1721932/pexels-photo-1721932.jpeg?auto=compress&cs=tinysrgb&w=1600')">
+                <div class="hero-content">
+                    <h1>Artisanal Tarts</h1>
+                    <p>Seasonal Fruit Medley</p>
+                    <a href="boutique.html" class="btn">Discover</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <button class="slider-btn" onclick="prevSlide()">‹</button>
+            <button class="slider-btn" onclick="nextSlide()">›</button>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+    </section>
+
+    <section class="bespoke-lab" id="bespoke">
+        <div class="container">
+            <div class="lab-container">
+                <div class="lab-form">
+                    <h2>Create Your Masterpiece</h2>
+                    <div class="form-group">
+                        <label>Signature Base</label>
+                        <select id="base-select" class="form-control">
+                            <option value="25">Almond Génoise - $25</option>
+                            <option value="35">Pistachio Dacquoise - $35</option>
+                            <option value="30">Chocolate Fudge - $30</option>
+                            <option value="28">Vanilla Bean - $28</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Filling & Infusion</label>
+                        <select id="filling-select" class="form-control">
+                            <option value="12">Wild Raspberry - $12</option>
+                            <option value="15">Salted Caramel - $15</option>
+                            <option value="18">Dark Chocolate Ganache - $18</option>
+                            <option value="14">Lemon Curd - $14</option>
+                        </select>
+                    </div>
+                    <div class="price-display">$<span id="custom-price">37</span>.00</div>
+                    <button class="btn btn-dark" onclick="addBespokeToCart()">Add to Cart</button>
+                </div>
+                <div class="lab-image">
+                    <img src="https://images.pexels.com/photos/1739748/pexels-photo-1739748.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Bespoke Creation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">The Boutique Edit</h2>
+            <p class="section-subtitle">Handcrafted perfection, delivered daily</p>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-badge">Bestseller</div>
+                    <img src="https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=400"
+                        alt="Mille-Feuille" class="product-image">
+                    <div class="product-info">
+                        <h3>Mille-Feuille Classique</h3>
+                        <p class="product-desc">Layers of crispy puff pastry and rich vanilla diplomat cream.</p>
+                        <div class="product-price">$18.00</div>
+                        <div class="product-actions">
+                            <button class="btn" onclick="addToCart({
+                            id: 1,
+                            name: 'Mille-Feuille Classique',
+                            price: 18.00,
+                            image: 'https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=400',
+                            description: 'Layers of crispy puff pastry and rich vanilla diplomat cream.'
+                        })">Add to Cart</button>
+                            <button class="btn btn-outline" onclick="viewProductDetails(1)">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">Seasonal</div>
+                    <img src="https://images.pexels.com/photos/461431/pexels-photo-461431.jpeg?auto=compress&cs=tinysrgb&w=400"
+                        alt="Framboise Tart" class="product-image">
+                    <div class="product-info">
+                        <h3>Framboise Tart</h3>
+                        <p class="product-desc">Fresh raspberries atop a buttery shortcrust shell.</p>
+                        <div class="product-price">$16.00</div>
+                        <div class="product-actions">
+                            <button class="btn" onclick="addToCart({
+                            id: 2,
+                            name: 'Framboise Tart',
+                            price: 16.00,
+                            image: 'https://images.pexels.com/photos/461431/pexels-photo-461431.jpeg?auto=compress&cs=tinysrgb&w=400',
+                            description: 'Fresh raspberries atop a buttery shortcrust shell.'
+                        })">Add to Cart</button>
+                            <button class="btn btn-outline" onclick="viewProductDetails(2)">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&cs=tinysrgb&w=400"
+                        alt="Chocolate Cake" class="product-image">
+                    <div class="product-info">
+                        <h3>Chocolate Ganache Cake</h3>
+                        <p class="product-desc">Decadent dark chocolate layers with silk ganache.</p>
+                        <div class="product-price">$22.00</div>
+                        <div class="product-actions">
+                            <button class="btn" onclick="addToCart({
+                            id: 3,
+                            name: 'Chocolate Ganache Cake',
+                            price: 22.00,
+                            image: 'https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&cs=tinysrgb&w=400',
+                            description: 'Decadent dark chocolate layers with silk ganache.'
+                        })">Add to Cart</button>
+                            <button class="btn btn-outline" onclick="viewProductDetails(3)">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more">
+                <a href="boutique.html" class="btn btn-outline">View All Collections</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>25+</h3>
+                    <p>Signature Bases</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1000+</h3>
+                    <p>Daily Flaky Layers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Artisanal Craft</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Sweet Heaven</h3>
+                    <p style="color: #bbb; margin-bottom: 20px; line-height: 1.6;">Artisanal patisserie & bespoke
+                        creations since 2026. Crafting moments of sweetness with every bite.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📽️</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="boutique.html">Boutique</a></li>
+                        <li><a href="gifthampers.html">Gift Hampers</a></li>
+                        <li><a href="aboutus.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="events.html">Event Catering</a></li>
+                        <li><a href="#">Wedding Cakes</a></li>
+                        <li><a href="#">Corporate Gifting</a></li>
+                        <li><a href="#">Baking Workshops</a></li>
+                        <li><a href="#">Delivery Info</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Stay Sweetened</h3>
+                    <div class="newsletter">
+                        <p>Subscribe for exclusive recipes, early access to new collections, and sweet surprises.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Sweet Heaven Atelier. All rights reserved. | Crafted with ❤️ and 🍰</p>
+                <p style="margin-top: 10px; font-size: 0.75rem;">75 Rue du Faubourg Saint-Honoré, Paris | +33 1 23 45 67
+                    89</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Sweet Bag</h3>
+            <button class="close-cart">✕</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span>$0.00</span>
+        </div>
+        <button class="btn btn-dark" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal">
+            <button class="close-modal" onclick="closeModal('checkout-modal')">✕</button>
+            <div style="font-size: 4rem; color: var(--gold); margin-bottom: 20px;">✦</div>
+            <h2 style="font-family: 'Cormorant Garamond'; font-size: 2.5rem; margin-bottom: 15px;">Order Confirmed!</h2>
+            <p style="color: #666; margin-bottom: 30px; line-height: 1.6;">Thank you for your order! Our master bakers
+                are now crafting your heavenly selection.</p>
+            <button class="btn" onclick="closeModal('checkout-modal')">Continue Shopping</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal">
+            <button class="close-modal" onclick="closeModal('product-modal')">✕</button>
+            <img id="modal-image" src="" alt=""
+                style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+            <h2 id="modal-title" style="font-family: 'Cormorant Garamond'; font-size: 2rem; margin-bottom: 10px;"></h2>
+            <p id="modal-description" style="color: #666; margin-bottom: 20px; line-height: 1.6;"></p>
+            <div id="modal-price" style="font-size: 1.8rem; color: var(--gold); font-weight: 700; margin-bottom: 25px;">
+            </div>
+            <button class="btn" id="modal-add-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+   
+    <script src="script.js"></script>
+</body>
+</html>

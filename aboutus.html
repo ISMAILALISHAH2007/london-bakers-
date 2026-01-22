@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Sweet Heaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">SH</div>
+            SWEET<span>HEAVEN</span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="gifthampers.html">Gift Hampers</a></li>
+            <li class="dropdown">
+                <a href="#">Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="index.html#bespoke">Bespoke Lab</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html">Catering</a>
+                </div>
+            </li>
+          <li class="dropdown">
+    <a href="#">About ▾</a>
+    <div class="dropdown-content">
+        <a href="aboutus.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="customercare.html">Customer Care</a> 
+    </div>
+</li>
+        </ul>
+        
+        <div class="nav-actions">
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒
+                <div class="cart-count">0</div>
+            </div>
+        </div>
+        
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <section class="about-hero">
+        <div class="container">
+            <div style="text-align: center; color: white;">
+                <p style="letter-spacing: 3px; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 20px;">The Soul of the Atelier</p>
+                <h1 style="font-size: 4.5rem; margin-bottom: 30px; font-style: italic;">Our Story</h1>
+                <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem; opacity: 0.9;">Where passion meets pastry, and every creation tells a story of craftsmanship</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-text">
+                    <h2 style="font-size: 2.8rem; margin-bottom: 25px; color: var(--gold);">A Symphony of Sugar</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px; color: #555;">Sweet Heaven began as a "Bespoke Lab"—a quiet corner where "Artisanal Craftsmanship" was the only language spoken. Our founders, Master Patissiers Élise and Antoine, believed that a pastry shouldn't just be eaten; it should be an experience of architectural grace.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px; color: #555;">From the first "Mille-Feuille Classique" to our complex "Opera Gâteau," every creation is a testament to the belief that the finest ingredients deserve reverence. We source only from trusted artisans: French butter from Normandy, Belgian chocolate, and organic fruits from local farms.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.7; color: #555;">What started as a small atelier in 2026 has blossomed into a destination for those who appreciate the poetry of perfect pastry. Each day, our team arrives before dawn, committed to creating moments of sweetness that linger in memory.</p>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.pexels.com/photos/2144444/pexels-photo-2144444.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pastry Craft" style="width: 100%; border-radius: 20px; box-shadow: 20px 20px 0px var(--pink-bg);">
+                </div>
+            </div>
+            
+            <div class="story-grid" style="margin-top: 100px; flex-direction: row-reverse;">
+                <div class="story-text">
+                    <h2 style="font-size: 2.8rem; margin-bottom: 25px; color: var(--gold);">The Master's Bake</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px; color: #555;">Each dawn, our "Master Patissiers" select only the freshest harvest to create "Infinite treasures". We treat our kitchen like a gallery, where "Daily fresh selections" are curated for the most discerning palates.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px; color: #555;">Our "Bespoke" mission ensures that your imagination is the only limit, offering over 25 signature bases for your custom creations. From wedding cakes that tell love stories to corporate gifts that impress, we believe every occasion deserves a sweet touch.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.7; color: #555;">Beyond the kitchen, we're committed to sustainability. Our packaging is eco-friendly, we compost all organic waste, and we partner with local charities to share sweetness with those in need.</p>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chef at work" style="width: 100%; border-radius: 20px; box-shadow: -20px 20px 0px var(--pink-bg);">
+                </div>
+            </div>
+            
+            <div class="story-grid" style="margin-top: 100px;">
+                <div class="story-text">
+                    <h2 style="font-size: 2.8rem; margin-bottom: 25px; color: var(--gold);">Our Philosophy</h2>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 25px;">
+                        <div>
+                            <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--dark-choco);">Craft Over Convenience</h3>
+                            <p style="color: #666; line-height: 1.6;">We never take shortcuts. Each croissant is hand-laminated 27 times. Each macaron is piped individually. Quality cannot be rushed.</p>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--dark-choco);">Seasonal & Sustainable</h3>
+                            <p style="color: #666; line-height: 1.6;">Our menu evolves with the seasons. We work directly with farmers to source the best ingredients at their peak freshness.</p>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--dark-choco);">Education & Excellence</h3>
+                            <p style="color: #666; line-height: 1.6;">Our team undergoes continuous training in French pastry techniques. We host workshops to share our passion with the community.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.pexels.com/photos/1739748/pexels-photo-1739748.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Philosophy" style="width: 100%; border-radius: 20px; box-shadow: 20px 20px 0px var(--pink-bg);">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>25+</h3>
+                    <p>Signature Bases</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1k+</h3>
+                    <p>Daily Flaky Layers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Artisanal Craft</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Seasonal Varieties</p>
+                </div>
+                <div class="stat-item">
+                    <h3>2026</h3>
+                    <p>Established</p>
+                </div>
+                <div class="stat-item">
+                    <h3>∞</h3>
+                    <p>Sweet Memories</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section style="padding: 100px 0; background: var(--white);">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 2.5rem;">Meet Our Master Patissiers</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 60px;">
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 150px; border-radius: 50%; background: var(--pink-bg); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--accent-pink);">👩‍🍳</div>
+                    <h3 style="margin-bottom: 10px;">Élise Moreau</h3>
+                    <p style="color: var(--gold); font-weight: 600; margin-bottom: 15px;">Head Patissier</p>
+                    <p style="color: #666; line-height: 1.6;">Trained in Lyon and Paris, Élise brings 15 years of classical French pastry expertise to every creation.</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 150px; border-radius: 50%; background: var(--pink-bg); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--gold);">👨‍🍳</div>
+                    <h3 style="margin-bottom: 10px;">Antoine Lefèvre</h3>
+                    <p style="color: var(--gold); font-weight: 600; margin-bottom: 15px;">Chocolate Specialist</p>
+                    <p style="color: #666; line-height: 1.6;">A master chocolatier who studied in Belgium, Antoine creates our signature ganaches and truffles.</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 150px; border-radius: 50%; background: var(--pink-bg); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--dark-choco);">👩‍🍳</div>
+                    <h3 style="margin-bottom: 10px;">Sophie Chen</h3>
+                    <p style="color: var(--gold); font-weight: 600; margin-bottom: 15px;">Viennoiserie Expert</p>
+                    <p style="color: #666; line-height: 1.6;">Sophie's croissants are legendary. She brings traditional Austrian techniques to our French bakery.</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 150px; border-radius: 50%; background: var(--pink-bg); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--accent-pink);">👨‍🍳</div>
+                    <h3 style="margin-bottom: 10px;">Marco Rossi</h3>
+                    <p style="color: var(--gold); font-weight: 600; margin-bottom: 15px;">Gelato & Sorbet Artisan</p>
+                    <p style="color: #666; line-height: 1.6;">From Sicily, Marco creates Italian-inspired frozen desserts that complement our pastry selection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Sweet Heaven</h3>
+                    <p style="color: #bbb; margin-bottom: 20px; line-height: 1.6;">Where every pastry tells a story of passion and precision.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📽️</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Visit Us</h3>
+                    <ul class="footer-links" style="color: #bbb;">
+                        <li>📍 75 Rue du Faubourg Saint-Honoré</li>
+                        <li>Paris, France 75008</li>
+                        <li>🕐 Daily: 7AM - 9PM</li>
+                        <li>📞 +33 1 23 45 67 89</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Behind the Scenes</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Our Process</a></li>
+                        <li><a href="#">Ingredient Sourcing</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Career Opportunities</a></li>
+                        <li><a href="#">Press & Media</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Join Our Journey</h3>
+                    <div class="newsletter">
+                        <p>Be part of our story. Subscribe for behind-the-scenes content and exclusive offers.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Sweet Heaven Atelier. Crafted with ❤️ in Paris.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Sweet Bag</h3>
+            <button class="close-cart">✕</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span>$0.00</span>
+        </div>
+        <button class="btn btn-dark" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+    
+    <div class="toast" id="toast"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

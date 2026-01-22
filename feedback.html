@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Sweet Heaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">SH</div>
+            SWEET<span>HEAVEN</span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="gifthampers.html">Gift Hampers</a></li>
+            <li class="dropdown">
+                <a href="#">Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="index.html#bespoke">Bespoke Lab</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html">Catering</a>
+                </div>
+            </li>
+             <li class="dropdown">
+                <a href="#">About ▾</a>
+                <div class="dropdown-content">
+                    <a href="aboutus.html">Our Story</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="customercare.html">Customer Care</a>
+                </div>
+            </li>
+        </ul>
+        
+        <div class="nav-actions">
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒
+                <div class="cart-count">0</div>
+            </div>
+        </div>
+        
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <section class="feedback-section" style="margin-top: 80px;">
+        <div class="container">
+            <div class="feedback-card">
+                <h1 class="section-title" style="font-size: 2.5rem; margin-bottom: 10px;">Share Your Experience</h1>
+                <p class="section-subtitle" style="margin-bottom: 40px;">Your feedback helps us create sweeter moments</p>
+                
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label>Overall Rating</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5">★</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4">★</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3">★</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2">★</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1">★</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="item">What did you enjoy most?</label>
+                        <select id="item" name="item" class="form-control">
+                            <option value="">Select your favorite</option>
+                            <option value="cakes">Signature Cakes</option>
+                            <option value="pastries">French Pastries</option>
+                            <option value="macarons">Parisian Macarons</option>
+                            <option value="tarts">Seasonal Tarts</option>
+                            <option value="bread">Artisan Bread</option>
+                            <option value="bespoke">Bespoke Creations</option>
+                            <option value="hampers">Gift Hampers</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="visit-type">Type of Visit</label>
+                        <select id="visit-type" name="visit-type" class="form-control">
+                            <option value="">Select visit type</option>
+                            <option value="dine-in">Dine-in Experience</option>
+                            <option value="takeaway">Takeaway</option>
+                            <option value="delivery">Home Delivery</option>
+                            <option value="event">Event Catering</option>
+                            <option value="custom">Custom Order</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comments">Your Feedback</label>
+                        <textarea id="comments" name="comments" class="form-control" rows="5" placeholder="Tell us about your experience, suggestions, or anything we could improve..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name (Optional)</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email for updates" required>
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 30px;">
+                        <label>
+                            <input type="checkbox" name="subscribe" checked>
+                            Subscribe to our newsletter for exclusive recipes and offers
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%; padding: 15px; font-size: 1rem;">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <section style="padding: 60px 0; background: var(--white);">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 2rem;">What Our Customers Say</h2>
+            
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div class="testimonial-card" style="background: var(--pink-bg); padding: 30px; border-radius: 15px;">
+                    <div class="star-rating" style="margin-bottom: 15px;">
+                        <span style="color: var(--gold);">★★★★★</span>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 20px;">"The Mille-Feuille is a work of art! Every layer is perfection. Sweet Heaven has redefined my idea of what pastry can be."</p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="width: 50px; height: 50px; background: var(--accent-pink); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">A</div>
+                        <div>
+                            <h4 style="font-weight: 600;">Alexandra M.</h4>
+                            <p style="font-size: 0.8rem; color: #666;">Paris, France</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="background: var(--pink-bg); padding: 30px; border-radius: 15px;">
+                    <div class="star-rating" style="margin-bottom: 15px;">
+                        <span style="color: var(--gold);">★★★★★</span>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 20px;">"Ordered the Royal Box for my wife's birthday. The presentation was stunning and every piece was exquisite. Worth every penny!"</p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="width: 50px; height: 50px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">J</div>
+                        <div>
+                            <h4 style="font-weight: 600;">James R.</h4>
+                            <p style="font-size: 0.8rem; color: #666;">London, UK</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="background: var(--pink-bg); padding: 30px; border-radius: 15px;">
+                    <div class="star-rating" style="margin-bottom: 15px;">
+                        <span style="color: var(--gold);">★★★★☆</span>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 20px;">"The bespoke cake for our wedding was beyond expectations. The team understood our vision perfectly. Truly magical!"</p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="width: 50px; height: 50px; background: var(--dark-choco); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">S</div>
+                        <div>
+                            <h4 style="font-weight: 600;">Sophie & Marco</h4>
+                            <p style="font-size: 0.8rem; color: #666;">New York, USA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Sweet Heaven</h3>
+                    <p style="color: #bbb; margin-bottom: 20px; line-height: 1.6;">Your feedback shapes our future creations.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📽️</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="boutique.html">Boutique</a></li>
+                        <li><a href="gifthampers.html">Gift Hampers</a></li>
+                        <li><a href="customercare.html">Customer Care</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Customer Care</h3>
+                    <ul class="footer-links">
+                        <li><a href="customercare.html">Help Center</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Delivery Info</a></li>
+                        <li><a href="#">Returns Policy</a></li>
+                        <li><a href="feedback.html">Leave Feedback</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links" style="color: #bbb;">
+                        <li>📍 75 Rue du Faubourg Saint-Honoré, Paris</li>
+                        <li>📞 +33 1 23 45 67 89</li>
+                        <li>✉️ hello@sweetheaven.com</li>
+                        <li>🕐 Daily: 7AM - 9PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Sweet Heaven Atelier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Sweet Bag</h3>
+            <button class="close-cart">✕</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span>$0.00</span>
+        </div>
+        <button class="btn btn-dark" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+    
+    <div class="modal-overlay" id="thankyou-modal">
+        <div class="modal">
+            <button class="close-modal" onclick="closeModal('thankyou-modal')">✕</button>
+            <div style="font-size: 4rem; color: var(--gold); margin-bottom: 20px;">🎂</div>
+            <h2 style="font-family: 'Cormorant Garamond'; font-size: 2.5rem; margin-bottom: 15px;">Thank You!</h2>
+            <p style="color: #666; margin-bottom: 30px; line-height: 1.6;">Your feedback is precious to us. As a token of appreciation, here's a 10% discount code for your next order: <strong>SWEETFEEDBACK2026</strong></p>
+            <button class="btn" onclick="closeModal('thankyou-modal')">Continue to Boutique</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

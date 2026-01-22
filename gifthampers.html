@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Hampers | Sweet Heaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">SH</div>
+            SWEET<span>HEAVEN</span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="gifthampers.html">Gift Hampers</a></li>
+            <li class="dropdown">
+                <a href="#">Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="index.html#bespoke">Bespoke Lab</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html">Catering</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">About ▾</a>
+                <div class="dropdown-content">
+                    <a href="aboutus.html">Our Story</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="customercare.html">Customer Care</a>
+                </div>
+            </li>
+        </ul>
+        
+        <div class="nav-actions">
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒
+                <div class="cart-count">0</div>
+            </div>
+        </div>
+        
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <section class="hampers-hero">
+        <div class="container">
+            <div style="text-align: center; color: white;">
+                <p style="letter-spacing: 4px; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 20px;">The Art of Gifting</p>
+                <h1 style="font-size: 4rem; margin-bottom: 30px;">Heavenly Collections</h1>
+                <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem; opacity: 0.9;">Wrapped in silk, filled with artisanal wonder. Perfect for every celebration.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="products-section" style="padding: 100px 0;">
+        <div class="container">
+            <h2 class="section-title">Hand-Curated Hampers</h2>
+            <p class="section-subtitle">Each hamper is a story of craftsmanship and care</p>
+            
+            <div class="hampers-grid">
+                <div class="hamper-card">
+                    <div class="product-badge" style="background: var(--gold);">Most Popular</div>
+                    <img src="https://images.pexels.com/photos/2144444/pexels-photo-2144444.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Royal Box" class="hamper-image">
+                    <div class="hamper-content">
+                        <h3>The Royal Box</h3>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Includes 12 gold-leaf macarons, signature Mille-Feuille, jar of 24K Gold Honey, and artisanal tea selection.</p>
+                        <div class="product-price">$145.00</div>
+                        <button class="btn" onclick="addHamperToCart('The Royal Box', 145, 'https://images.pexels.com/photos/2144444/pexels-photo-2144444.jpeg')">Add to Cart</button>
+                        <button class="btn btn-outline" style="margin-top: 10px;" onclick="viewHamperDetails(1)">Personalize Gift</button>
+                    </div>
+                </div>
+                
+                <div class="hamper-card">
+                    <div class="product-badge" style="background: var(--accent-pink);">Parisian Favorite</div>
+                    <img src="https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Parisian Picnic" class="hamper-image">
+                    <div class="hamper-content">
+                        <h3>The Parisian Picnic</h3>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Curated selection of 4 mini Framboise Tarts, Rose Water Macarons, organic Champagne Mousse, and French press coffee.</p>
+                        <div class="product-price">$95.00</div>
+                        <button class="btn" onclick="addHamperToCart('The Parisian Picnic', 95, 'https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg')">Add to Cart</button>
+                        <button class="btn btn-outline" style="margin-top: 10px;" onclick="viewHamperDetails(2)">Personalize Gift</button>
+                    </div>
+                </div>
+                
+                <div class="hamper-card">
+                    <div class="product-badge" style="background: var(--dark-choco); color: white;">Luxury Edition</div>
+                    <img src="https://images.pexels.com/photos/4110007/pexels-photo-4110007.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Atelier Masterpiece" class="hamper-image">
+                    <div class="hamper-content">
+                        <h3>Atelier Masterpiece</h3>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">The ultimate indulgence: Bespoke Lab creation voucher, 10 signature Eclairs d'Or, truffle collection, and crystal champagne flutes.</p>
+                        <div class="product-price">$210.00</div>
+                        <button class="btn" onclick="addHamperToCart('Atelier Masterpiece', 210, 'https://images.pexels.com/photos/4110007/pexels-photo-4110007.jpeg')">Add to Cart</button>
+                        <button class="btn btn-outline" style="margin-top: 10px;" onclick="viewHamperDetails(3)">Personalize Gift</button>
+                    </div>
+                </div>
+                
+                <div class="hamper-card">
+                    <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Morning Delight" class="hamper-image">
+                    <div class="hamper-content">
+                        <h3>Morning Delight</h3>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Fresh croissants, artisan bread, homemade jams, premium coffee, and breakfast pastries for the perfect morning.</p>
+                        <div class="product-price">$65.00</div>
+                        <button class="btn" onclick="addHamperToCart('Morning Delight', 65, 'https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg')">Add to Cart</button>
+                        <button class="btn btn-outline" style="margin-top: 10px;" onclick="viewHamperDetails(4)">Personalize Gift</button>
+                    </div>
+                </div>
+                
+                <div class="hamper-card">
+                    <img src="https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Berry Bliss" class="hamper-image">
+                    <div class="hamper-content">
+                        <h3>Berry Bliss Collection</h3>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Seasonal berry tarts, raspberry macarons, blueberry muffins, strawberry shortcake, and berry-infused tea.</p>
+                        <div class="product-price">$85.00</div>
+                        <button class="btn" onclick="addHamperToCart('Berry Bliss Collection', 85, 'https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg')">Add to Cart</button>
+                        <button class="btn btn-outline" style="margin-top: 10px;" onclick="viewHamperDetails(5)">Personalize Gift</button>
+                    </div>
+                </div>
+                
+                <div class="hamper-card">
+                    <div class="product-badge">Chocolate Lover</div>
+                    <img src="https://images.pexels.com/photos/808941/pexels-photo-808941.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chocolate Symphony" class="hamper-image">
+                    <div class="hamper-content">
+                        <h3>Chocolate Symphony</h3>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Dark chocolate ganache cake, chocolate truffles, cocoa-dusted brownies, hot chocolate mix, and chocolate-dipped fruits.</p>
+                        <div class="product-price">$120.00</div>
+                        <button class="btn" onclick="addHamperToCart('Chocolate Symphony', 120, 'https://images.pexels.com/photos/808941/pexels-photo-808941.jpeg')">Add to Cart</button>
+                        <button class="btn btn-outline" style="margin-top: 10px;" onclick="viewHamperDetails(6)">Personalize Gift</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Sweet Heaven</h3>
+                    <p style="color: #bbb; margin-bottom: 20px; line-height: 1.6;">Artisanal patisserie & bespoke creations since 2026.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📽️</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="boutique.html">Boutique</a></li>
+                        <li><a href="gifthampers.html">Gift Hampers</a></li>
+                        <li><a href="aboutus.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Gift Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Corporate Gifting</a></li>
+                        <li><a href="#">Wedding Favors</a></li>
+                        <li><a href="#">Birthday Specials</a></li>
+                        <li><a href="#">Anniversary Hampers</a></li>
+                        <li><a href="#">Holiday Collections</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Stay Sweetened</h3>
+                    <div class="newsletter">
+                        <p>Subscribe for exclusive gifts ideas and seasonal collections.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Sweet Heaven Atelier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Sweet Bag</h3>
+            <button class="close-cart">✕</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span>$0.00</span>
+        </div>
+        <button class="btn btn-dark" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+    
+    <div class="modal-overlay" id="gift-modal">
+        <div class="modal">
+            <button class="close-modal" onclick="closeModal('gift-modal')">✕</button>
+            <h2 id="gift-title" style="font-family: 'Cormorant Garamond'; font-size: 2rem; margin-bottom: 20px;">Personalize Your Gift</h2>
+            <div class="form-group">
+                <label>Recipient Name</label>
+                <input type="text" id="recipient-name" class="form-control" placeholder="Enter recipient's name">
+            </div>
+            <div class="form-group">
+                <label>Gift Message</label>
+                <textarea id="gift-message" class="form-control" rows="4" placeholder="Write your personal message here..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Delivery Date (Optional)</label>
+                <input type="date" id="delivery-date" class="form-control">
+            </div>
+            <button class="btn" onclick="addPersonalizedGift()">Add to Cart with Personalization</button>
+        </div>
+    </div>
+    
+    <div class="toast" id="toast"></div>
+    
+    <script src="script.js"></script>
+    <script>
+        let currentHamper = null;
+        
+        function addHamperToCart(name, price, image) {
+            const product = {
+                id: Date.now(),
+                name: name,
+                price: price,
+                image: image,
+                description: "Gift Hamper"
+            };
+            addToCart(product);
+        }
+        
+        function viewHamperDetails(hamperId) {
+            const hampers = [
+                { name: "The Royal Box", price: 145 },
+                { name: "The Parisian Picnic", price: 95 },
+                { name: "Atelier Masterpiece", price: 210 },
+                { name: "Morning Delight", price: 65 },
+                { name: "Berry Bliss Collection", price: 85 },
+                { name: "Chocolate Symphony", price: 120 }
+            ];
+            
+            currentHamper = hampers[hamperId - 1];
+            document.getElementById('gift-title').textContent = `Personalize: ${currentHamper.name}`;
+            document.getElementById('gift-modal').style.display = 'flex';
+        }
+        
+        function addPersonalizedGift() {
+            const name = document.getElementById('recipient-name').value;
+            const message = document.getElementById('gift-message').value;
+            const date = document.getElementById('delivery-date').value;
+            
+            if (!name.trim()) {
+                alert("Please enter recipient's name");
+                return;
+            }
+            
+            const product = {
+                id: Date.now(),
+                name: `${currentHamper.name} (Personalized)`,
+                price: currentHamper.price,
+                image: "https://images.pexels.com/photos/2144444/pexels-photo-2144444.jpeg?auto=compress&cs=tinysrgb&w=800",
+                description: `Gift for: ${name}. Message: ${message || 'No message'}. Delivery: ${date || 'Standard'}`
+            };
+            
+            addToCart(product);
+            closeModal('gift-modal');
+            
+            document.getElementById('recipient-name').value = '';
+            document.getElementById('gift-message').value = '';
+            document.getElementById('delivery-date').value = '';
+        }
+    </script>
+</body>
+</html>

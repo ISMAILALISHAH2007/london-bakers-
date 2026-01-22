@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Sweet Heaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">SH</div>
+            SWEET<span>HEAVEN</span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="gifthampers.html">Gift Hampers</a></li>
+            <li class="dropdown">
+                <a href="#">Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="index.html#bespoke">Bespoke Lab</a>
+                    <a href="events.html">Events</a>
+                    <a href="catering.html">Catering</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">About ▾</a>
+                <div class="dropdown-content">
+                    <a href="aboutus.html">Our Story</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="customercare.html">Customer Care</a>
+                </div>
+            </li>
+        </ul>
+        
+        <div class="nav-actions">
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒
+                <div class="cart-count">0</div>
+            </div>
+        </div>
+        
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <section class="about-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+        <div class="container">
+            <div style="text-align: center; color: white;">
+                <h1 style="font-size: 4rem; margin-bottom: 20px;">Events & Celebrations</h1>
+                <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Creating unforgettable moments with exquisite pastry art</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="products-section" style="padding: 100px 0;">
+        <div class="container">
+            <h2 class="section-title">Event Services</h2>
+            <p class="section-subtitle">From intimate gatherings to grand celebrations</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px;">
+                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow);">
+                    <div style="font-size: 3rem; color: var(--gold); margin-bottom: 20px;">💒</div>
+                    <h3 style="margin-bottom: 15px;">Weddings</h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Custom wedding cakes and dessert tables that tell your love story. Consultations include tasting sessions.</p>
+                    <button class="btn" onclick="location.href='contact.html'">Inquire Now</button>
+                </div>
+                
+                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow);">
+                    <div style="font-size: 3rem; color: var(--gold); margin-bottom: 20px;">🎂</div>
+                    <h3 style="margin-bottom: 15px;">Birthdays</h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Themed cakes and dessert spreads for all ages. From children's parties to milestone celebrations.</p>
+                    <button class="btn" onclick="location.href='contact.html'">Book Celebration</button>
+                </div>
+                
+                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow);">
+                    <div style="font-size: 3rem; color: var(--gold); margin-bottom: 20px;">🏢</div>
+                    <h3 style="margin-bottom: 15px;">Corporate Events</h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Impress clients and reward teams with artisanal pastry selections. Custom branding available.</p>
+                    <button class="btn" onclick="location.href='contact.html'">Plan Event</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section style="padding: 100px 0; background: var(--pink-bg);">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 2.5rem;">Event Packages</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow);">
+                    <div style="background: var(--gold); color: white; padding: 20px; text-align: center;">
+                        <h3 style="font-size: 1.5rem;">Petite Fête</h3>
+                        <div style="font-size: 2.5rem; font-weight: 700;">$500+</div>
+                    </div>
+                    <div style="padding: 30px;">
+                        <ul style="list-style: none; margin-bottom: 30px;">
+                            <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">✓ <span>Custom cake for up to 20 guests</span></li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">✓ <span>3 dessert varieties</span></li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">✓ <span>Complimentary consultation</span></li>
+                            <li style="display: flex; align-items: center; gap: 10px;">✓ <span>Basic setup</span></li>
+                        </ul>
+                        <button class="btn" style="width: 100%;">Select Package</button>
+                    </div>
+                </div>
+                
+                <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); border: 2px solid var(--gold);">
+                    <div style="background: var(--dark-choco); color: white; padding: 20px; text-align: center;">
+                        <h3 style="font-size: 1.5rem;">Grand Gala</h3>
+                        <div style="font-size: 2.5rem; font-weight: 700;">$1,200+</div>
+                    </div>
+                    <div style="padding: 30px;">
+                        <ul style="list-style: none; margin-bottom: 30px;">
+                            <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">✓ <span>Multi-tier custom cake</span></li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">✓ <span>8+ dessert varieties</span></li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">✓ <span>Personalized tasting session</span></li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">✓ <span>Full setup & display</span></li>
+                            <li style="display: flex; align-items: center; gap: 10px;">✓ <span>Event coordinator</span></li>
+                        </ul>
+                        <button class="btn btn-dark" style="width: 100%;">Select Package</button>
+                    </div>
+                </div>
+                
+                <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow);">
+                    <div style="background: var(--accent-pink); color: white; padding: 20px; text-align: center;">
+                        <h3 style="font-size: 1.5rem;">Bespoke Luxury</h3>
+                        <div style="font-size: 2.5rem; font-weight: 700;">Custom</div>
+                    </div>
+                    <div style="padding: 30px;">
+                        <ul style="list-style: none; margin-bottom: 30px;">
+                            <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">✓ <span>Fully customized experience</span></li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">✓ <span>Unlimited dessert varieties</span></li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">✓ <span>Live pastry station</span></li>
+                            <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">✓ <span>Premium setup & service</span></li>
+                            <li style="display: flex; align-items: center; gap: 10px;">✓ <span>Dedicated event team</span></li>
+                        </ul>
+                        <button class="btn" style="width: 100%;">Contact for Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Sweet Heaven Events</h3>
+                    <p style="color: #bbb; margin-bottom: 20px; line-height: 1.6;">Creating memorable celebrations through exquisite pastry art.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📽️</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Event Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Wedding Cakes</a></li>
+                        <li><a href="#">Birthday Celebrations</a></li>
+                        <li><a href="#">Corporate Events</a></li>
+                        <li><a href="#">Anniversary Parties</a></li>
+                        <li><a href="#">Holiday Gatherings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Planning Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Event Gallery</a></li>
+                        <li><a href="#">Planning Timeline</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Tasting Appointments</a></li>
+                        <li><a href="#">Vendor Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Start Planning</h3>
+                    <div class="newsletter">
+                        <p>Ready to create your perfect event? Contact us for a consultation.</p>
+                        <button class="btn" onclick="location.href='contact.html'" style="width: 100%; margin-top: 10px;">Schedule Consultation</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Sweet Heaven Atelier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Sweet Bag</h3>
+            <button class="close-cart">✕</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span>$0.00</span>
+        </div>
+        <button class="btn btn-dark" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
